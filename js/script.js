@@ -97,6 +97,8 @@ $(document).ready(function() {
     $('#total-payment').text('$ ' + ($('#unit-price').text() * $('#quantity').val()));
     $('#quantity-payment').text($('#quantity').val() + 'x ');
     $('#amount').val(($('#unit-price').text() * $('#quantity').val()));
+
+    $('[name=amount]').val(($('#unit-price').text() * $('#quantity').val()));
 });
 
 /* Calculate price vs quantity */
@@ -106,5 +108,7 @@ $(document).ready(function() {
         $('#total-payment').text('$ ' + ($('#unit-price').text() * $('#quantity').val()));
         $('#quantity-payment').text($('#quantity').val() + 'x ');
         $('#amount').val(($('#unit-price').text() * $('#quantity').val()));
+
+        $('[name=amount]').val(($('#unit-price').text() * $('#quantity').val()));
     });
 });

@@ -6,13 +6,13 @@ MercadoPago\SDK::setAccessToken("APP_USR-6548021211316693-032322-821a5daa8760a82
 
 $payment = new MercadoPago\Payment();
 
-$payment->transaction_amount = 100;
+$payment->transaction_amount = $_POST['amount'];
 $date = new DateTime();
 $date->getTimestamp();
-$date->add(new DateInterval('P20D')); // Add 20 days for expiration
+$date->add(new DateInterval('P5D')); // Add 5 days for expiration
 $payment->date_of_expiration = date_format($date, 'Y-m-d'. '\T' . 'H:i:s.z-03:00');
 $payment->description = "Product Title";
-$payment->payment_method_id = "bolbradesco";
+$payment->payment_method_id = $_POST['paymentMethodId'];
 $payment->external_reference = "ext_ref_0001";
 
 $payment->notification_url = "https://webhook.site/8deed478-df89-41aa-96c6-06975b18a665";

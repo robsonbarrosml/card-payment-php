@@ -116,14 +116,26 @@
                   <select type="text" id="installments" name="installmentsOption" class="form-control" aria-label="installments" aria-describedby="basic-addon1"></select>
                 </div>
                 <div class="form-group col-sm-12">
-                  <input type="hidden" name="amount" id="amount" value="10" />
+                  <input type="hidden" name="amount" id="amount" />
                   <input type="hidden" name="paymentMethodId" id="paymentMethodId"/>
                   <button type="submit" class="btn btn-primary btn-block">Proceed</button>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" class="chevron-left">
-                    <path fill="#009EE3" fill-rule="nonzero"id="chevron_left" d="M7.05 1.4L6.2.552 1.756 4.997l4.449 4.448.849-.848-3.6-3.6z"></path>
-                  </svg>
-                  <a class="go_back" >Go back to Shopping Cart</a>
                 </div>
+              </div>
+            </div>
+          </form>
+          <form action="/process_ticket_payment" method="post" id="ticket-pay" name="ticket-pay" class="form-payment">
+            <div class="card-details">
+              <h3 class="title">Ticket Payment</h3>
+              <div class="row">
+                <input type="hidden" name="amount" id="amount2"/>
+                <input type="hidden" name="paymentMethodId" id="paymentMethodId" value="bolbradesco"/>
+                <button type="submit" class="btn btn-primary btn-block">Proceed with Ticket</button>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" class="chevron-left">
+                  <path fill="#009EE3" fill-rule="nonzero"id="chevron_left" d="M7.05 1.4L6.2.552 1.756 4.997l4.449 4.448.849-.848-3.6-3.6z"></path>
+                </svg>
+                <a class="go_back" >Go back to Shopping Cart</a>
               </div>
             </div>
           </form>
